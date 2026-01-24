@@ -1,22 +1,21 @@
-/* Web3 Design System - Dark Mode */
+/* Web3 Design System - Dark Mode - Scoped */
 
-:root {
+.detail-container {
   /* Color Palette */
-  --bg-dark: #0f172a;        /* Slate-900 */
-  --bg-card: #1e293b;        /* Slate-800 */
-  --text-main: #f8fafc;      /* Slate-50 */
-  --text-muted: #94a3b8;     /* Slate-400 */
+  --bg-dark: #000000;        /* Black */
+  --bg-card: #121212;        /* Dark Gray */
+  --text-main: #ffffff;      /* White */
+  --text-muted: #a1a1aa;     /* Zinc-400 */
   
   --primary: #818cf8;        /* Indigo-400 */
   --primary-hover: #a5b4fc;  /* Indigo-300 */
   
   --success: #4ade80;        /* Green-400 */
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-subtle: #27272a;  /* Zinc-800 */
   
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-}
 
-body {
+  /* Body Styles moved here */
   background-color: var(--bg-dark);
   color: var(--text-main);
   font-family: var(--font-body);
@@ -25,31 +24,36 @@ body {
 }
 
 /* Layout & Typography */
-h1, h2, h3, h4, h5, h6 {
+.detail-container h1, 
+.detail-container h2, 
+.detail-container h3, 
+.detail-container h4, 
+.detail-container h5, 
+.detail-container h6 {
   color: var(--text-main);
   letter-spacing: -0.025em; /* Clean, modern look */
   margin-top: 1.5em;
   margin-bottom: 0.75em;
 }
 
-p {
+.detail-container p {
   color: var(--text-muted);
   margin-bottom: 1.5em;
   line-height: 1.8;
 }
 
-a {
+.detail-container a {
   color: var(--primary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-a:hover {
+.detail-container a:hover {
   color: var(--primary-hover);
 }
 
 /* Card Component */
-.card {
+.detail-container .card {
   background-color: var(--bg-card);
   border-radius: 12px;
   border: 1px solid var(--border-subtle);
@@ -58,7 +62,7 @@ a:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
 
-.card:hover {
+.detail-container .card:hover {
   transform: translateY(-4px); /* "Float" animation */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 
               0 0 15px rgba(129, 140, 248, 0.25); /* Indigo glow */
@@ -66,7 +70,7 @@ a:hover {
 }
 
 /* Badge Component (Pill shape) */
-.badge {
+.detail-container .badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
@@ -81,13 +85,13 @@ a:hover {
 }
 
 /* List Styling (Custom Checkmarks) */
-ul {
+.detail-container ul {
   list-style: none; /* Remove default dots */
   padding-left: 0;
   margin: 1.5em 0;
 }
 
-ul li {
+.detail-container ul li {
   position: relative;
   padding-left: 2rem;
   margin-bottom: 0.75rem;
@@ -96,7 +100,7 @@ ul li {
   align-items: center;
 }
 
-ul li::before {
+.detail-container ul li::before {
   content: '✓';
   position: absolute;
   left: 0;
@@ -113,7 +117,7 @@ ul li::before {
 }
 
 /* Buttons */
-.btn {
+.detail-container .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -127,14 +131,14 @@ ul li::before {
   cursor: pointer;
 }
 
-.btn:hover {
+.detail-container .btn:hover {
   background-color: var(--primary-hover); /* Lighten on hover */
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
 }
 
 /* Utility / Markdown Overrides */
-code {
+.detail-container code {
   background-color: rgba(15, 23, 42, 0.5);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
@@ -144,6 +148,6 @@ code {
 }
 
 /* First Element Margin Fix */
-article > *:first-child {
+.detail-container article > *:first-child {
   margin-top: 0;
 }

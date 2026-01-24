@@ -8,17 +8,17 @@
 */
 
 :root {
-  /* Color Palette - Light Mode Overrides */
-  --bg-light: #ffffff;       /* White */
-  --bg-card: #f8fafc;        /* Slate-50 */
-  --text-main: #0f172a;      /* Slate-900 (Black-ish) */
-  --text-muted: #64748b;     /* Slate-500 */
+  /* Color Palette - Pure Black Theme */
+  --bg-light: #000000;       /* Black */
+  --bg-card: #121212;        /* Dark Gray */
+  --text-main: #ffffff;      /* White */
+  --text-muted: #a1a1aa;     /* Zinc-400 */
   
-  --primary: #4f46e5;        /* Indigo-600 */
-  --primary-hover: #4338ca;  /* Indigo-700 */
+  --primary: #818cf8;        /* Indigo-400 */
+  --primary-hover: #a5b4fc;  /* Indigo-300 */
   
-  --success: #22c55e;        /* Green-500 */
-  --border-subtle: #e2e8f0;  /* Slate-200 */
+  --success: #4ade80;        /* Green-400 */
+  --border-subtle: #27272a;  /* Zinc-800 */
   
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 }

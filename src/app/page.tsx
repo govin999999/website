@@ -75,7 +75,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen selection:bg-cyan-500/20 overflow-hidden relative z-10 font-sans text-slate-900 bg-white">
+      <main className="min-h-screen selection:bg-cyan-500/20 overflow-hidden relative z-10 font-sans text-white bg-black">
         <div className="relative z-10 max-w-7xl mx-auto pt-12 pb-24 px-6 sm:px-8 lg:px-12">
           
           {/* 🚀 Header Profile Section */}
@@ -88,7 +88,7 @@ export default function Home() {
             {/* Avatar */}
             <div className="relative group cursor-pointer">
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition duration-700 animate-pulse" />
-              <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-white bg-slate-50 shadow-xl ring-1 ring-slate-200">
+              <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-zinc-900 bg-zinc-900 shadow-xl ring-1 ring-zinc-800">
                 <Image 
                   src={PROFILE.avatar} 
                   alt={PROFILE.name} 
@@ -114,7 +114,7 @@ export default function Home() {
                   {PROFILE.name}
                 </span>
               </h1>
-              <p className="text-slate-600 text-2xl leading-relaxed font-medium max-w-3xl mx-auto">
+              <p className="text-zinc-400 text-2xl leading-relaxed font-medium max-w-3xl mx-auto">
                 {PROFILE.bio}
               </p>
             </div>
@@ -128,9 +128,9 @@ export default function Home() {
               href="https://x.com/govin999999"
               target="_blank"
               // 关键点：mx-24 (水平方向外边距) 和 flex-shrink-0 (防止被挤压)
-              className="mx-24 flex-shrink-0 group flex items-center justify-center w-20 h-20 rounded-full bg-white border border-slate-200 hover:border-cyan-500 transition-all duration-300 shadow-sm hover:shadow-md"
+              className="mx-24 flex-shrink-0 group flex items-center justify-center w-20 h-20 rounded-full bg-zinc-900 border border-zinc-800 hover:border-cyan-500 transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <Twitter size={40} className="text-slate-500 group-hover:text-cyan-600 transition-colors" />
+              <Twitter size={40} className="text-zinc-500 group-hover:text-cyan-600 transition-colors" />
             </Link>
 
             {/* GitHub Button */}
@@ -138,9 +138,9 @@ export default function Home() {
               href="https://github.com/govin999999"
               target="_blank"
               // 关键点：mx-24
-              className="mx-24 flex-shrink-0 group flex items-center justify-center w-20 h-20 rounded-full bg-white border border-slate-200 hover:border-cyan-500 transition-all duration-300 shadow-sm hover:shadow-md"
+              className="mx-24 flex-shrink-0 group flex items-center justify-center w-20 h-20 rounded-full bg-zinc-900 border border-zinc-800 hover:border-cyan-500 transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <Github size={40} className="text-slate-500 group-hover:text-cyan-600 transition-colors" />
+              <Github size={40} className="text-zinc-500 group-hover:text-cyan-600 transition-colors" />
             </Link>
 
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
 
           {/* 🧭 Navigation / Filter - Clean Pill Style */}
           <div className="sticky top-8 z-40 flex justify-center mb-40">
-            <div className="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-full p-2.5 shadow-lg shadow-slate-200/50">
+            <div className="bg-black/80 backdrop-blur-xl border border-zinc-800 rounded-full p-2.5 shadow-lg shadow-black/50">
               <div className="flex overflow-x-auto gap-4 no-scrollbar max-w-[90vw] sm:max-w-none px-4 py-1 items-center">
                 {CATEGORIES.map((category) => (
                   <button
@@ -158,7 +158,7 @@ export default function Home() {
                       relative px-8 py-3.5 rounded-full text-lg font-bold transition-all duration-300 whitespace-nowrap z-10 tracking-wide
                       ${activeCategory === category 
                         ? "text-white shadow-md shadow-blue-500/30" 
-                        : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"}
+                        : "text-zinc-400 hover:text-white hover:bg-zinc-900"}
                     `}
                   >
                     {activeCategory === category && (
@@ -194,14 +194,14 @@ export default function Home() {
                 >
                   <Link
                     href={project.href}
-                    className="group relative block h-full bg-white border border-slate-200 rounded-3xl p-6 overflow-hidden hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300"
+                    className="group relative block h-full bg-zinc-900 border border-zinc-800 rounded-3xl p-6 overflow-hidden hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300"
                   >
                     
                     <div className="relative z-10 flex flex-col h-full space-y-6">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
                           <div 
-                            className="relative w-10 h-10 rounded-lg overflow-hidden border border-slate-100 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 flex-shrink-0"
+                            className="relative w-10 h-10 rounded-lg overflow-hidden border border-zinc-800 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 flex-shrink-0"
                             style={{ width: '40px', height: '40px' }}
                           >
                             <img 
@@ -212,25 +212,17 @@ export default function Home() {
                               className="w-full h-full object-cover"
                             />
                           </div>
-                          <h3 className="text-2xl font-black text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors duration-300">
+                          <h3 className="text-2xl font-black text-white tracking-tight group-hover:text-blue-600 transition-colors duration-300">
                             {project.title}
                           </h3>
                         </div>
                       </div>
                       
-                      <p className="text-slate-600 text-lg leading-relaxed flex-grow font-medium">
+                      <p className="text-zinc-400 text-lg leading-relaxed flex-grow font-medium">
                         {project.description}
                       </p>
                       
-                      <div className="pt-8 border-t border-slate-100 flex items-center justify-between">
-                         <span className="flex items-center gap-2 text-sm font-bold text-slate-500 group-hover:text-blue-600 transition-colors">
-                         
-                          
-                        </span>
-                        <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 border border-slate-100">
-                          
-                        </div>
-                      </div>
+                      
                     </div>
                   </Link>
                 </motion.div>
@@ -243,18 +235,18 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0 }} 
               animate={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center py-32 text-slate-500 space-y-6"
+              className="flex flex-col items-center justify-center py-32 text-zinc-400 space-y-6"
             >
-              <div className="p-8 rounded-full bg-slate-50 border border-slate-200 shadow-inner">
-                <Search size={48} className="text-slate-400" />
+              <div className="p-8 rounded-full bg-zinc-900 border border-zinc-800 shadow-inner">
+                <Search size={48} className="text-zinc-500" />
               </div>
-              <p className="text-2xl font-bold text-slate-400 tracking-wide">NO SIGNALS DETECTED</p>
+              <p className="text-2xl font-bold text-zinc-500 tracking-wide">NO SIGNALS DETECTED</p>
             </motion.div>
           )}
 
           {/* Footer */}
-          <footer className="text-center py-16 border-t border-slate-200 relative z-10">
-            <p className="text-slate-500 text-base font-medium tracking-wide">
+          <footer className="text-center py-16 border-t border-zinc-900 relative z-10">
+            <p className="text-zinc-500 text-base font-medium tracking-wide">
               © {new Date().getFullYear()} {PROFILE.name.toUpperCase()} — PROTOCOL V2.0
             </p>
           </footer>
