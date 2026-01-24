@@ -1,11 +1,10 @@
-# TradeGenius Auto Swap
-
-TradeGenius Auto Swap 是一个自动化交易脚本，用于在 TradeGenius 平台上自动执行 USDC/USDT 代币交换操作。
+# Genius Auto Swap
+Genius Auto Swap 是一个自动化交易脚本，用于在 TradeGenius 平台上自动执行 USDC/USDT 代币交换操作。
 
 ### 📋 脚本信息
 - **作者**： @govin
 - **版本**： 1.0.0
-- **支持平台**： [TradeGenius](https://www.tradegenius.com/trade)
+- **支持平台**： [Genius](https://www.tradegenius.com/trade)
 
 ### ✨ 主要功能
 - ✅ **自动选择代币**：自动识别并选择 USDC 和 USDT 代币。

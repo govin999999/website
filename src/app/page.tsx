@@ -6,7 +6,6 @@ import {
   Github, 
   Twitter, 
   ExternalLink, 
-  Code2, 
   Sparkles,
   Search
 } from "lucide-react";
@@ -37,10 +36,17 @@ const CATEGORIES = [
 
 const PROJECTS = [
   {
-    title: "TradeGenius Auto Swap",
-    description: "全自动 USDC/USDT 交易脚本，支持智能余额检测与循环执行。",
-    icon: Code2,
+    title: "Genius Auto Swap",
+    description: "Genius全自动 USDC/USDT 交易脚本，支持智能余额检测与循环执行。",
+    icon: "/bg/genius.jpg",
     href: "/Genius",
+    category: "PerpDex"
+  },
+  {
+    title: "Standx Auto Trade",
+    description: "Standx 平台自动化交易脚本，支持多账户并发与自动做市。",
+    icon: "/bg/standx.jpg",
+    href: "/standx",
     tag: "SCRIPT",
     category: "PerpDex"
   }
@@ -177,14 +183,14 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20 px-4"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 lg:gap-x-24 lg:gap-y-32 px-4 pb-20"
             >
               {filteredProjects.map((project, idx) => (
                 <motion.div
                   key={`${project.title}-${idx}`}
                   variants={itemVariants}
                   whileHover={{ y: -5 }}
-                  className={`h-full ${idx % 2 === 1 ? 'md:translate-y-16' : ''} ${idx % 3 === 1 ? 'lg:translate-y-24' : ''}`}
+                  className="h-full m-6 md:m-8 lg:m-10"
                 >
                   <Link
                     href={project.href}
@@ -192,20 +198,25 @@ export default function Home() {
                   >
                     
                     <div className="relative z-10 flex flex-col h-full space-y-6">
-                      <div className="flex items-start justify-between">
-                        <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 text-blue-600 group-hover:text-cyan-600 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-sm">
-                          <project.icon size={40} strokeWidth={1.5} />
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <div 
+                            className="relative w-10 h-10 rounded-lg overflow-hidden border border-slate-100 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 flex-shrink-0"
+                            style={{ width: '40px', height: '40px' }}
+                          >
+                            <img 
+                              src={project.icon} 
+                              alt={project.title} 
+                              width="40"
+                              height="40"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <h3 className="text-2xl font-black text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors duration-300">
+                            {project.title}
+                          </h3>
                         </div>
-                        
-                        {/* Tag */}
-                        <span className="px-6 py-2 rounded-full text-sm font-bold tracking-wide text-white bg-gradient-to-r from-cyan-500 to-blue-500 shadow-md shadow-blue-500/20">
-                          {project.tag}
-                        </span>
                       </div>
-
-                      <h3 className="text-3xl font-black text-slate-900 mb-2 tracking-tight group-hover:text-blue-600 transition-colors duration-300">
-                        {project.title}
-                      </h3>
                       
                       <p className="text-slate-600 text-lg leading-relaxed flex-grow font-medium">
                         {project.description}
@@ -213,11 +224,11 @@ export default function Home() {
                       
                       <div className="pt-8 border-t border-slate-100 flex items-center justify-between">
                          <span className="flex items-center gap-2 text-sm font-bold text-slate-500 group-hover:text-blue-600 transition-colors">
-                          <Sparkles size={18} className="text-yellow-500" />
-                          EXPLORE NOW
+                         
+                          
                         </span>
                         <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 border border-slate-100">
-                          <ExternalLink size={20} />
+                          
                         </div>
                       </div>
                     </div>

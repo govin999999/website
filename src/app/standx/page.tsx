@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { ArrowLeft, Code } from 'lucide-react';
 import './style.css';
 
-export default async function GeniusPage() {
-  const filePath = path.join(process.cwd(), 'src/app/Genius/genius.md');
+export default async function StandxPage() {
+  const filePath = path.join(process.cwd(), 'src/app/standx/standx.md');
   const content = await fs.readFile(filePath, 'utf-8');
 
   return (
@@ -22,8 +22,9 @@ export default async function GeniusPage() {
                     <ArrowLeft size={20} />
                     <span>返回首页</span>
                 </Link>
+
                 <Link 
-                    href="https://github.com/govin999999/Genius"
+                    href="https://github.com/govin999999/standx"
                     className="btn shadow-md"
                 >
                     <Code size={20} />
@@ -35,8 +36,8 @@ export default async function GeniusPage() {
             <div className="card">
                 <div className="flex items-start gap-4">
                     <img 
-                        src="/bg/genius.jpg" 
-                        alt="Genius Icon" 
+                        src="/bg/standx.jpg" 
+                        alt="Standx Icon" 
                         className="w-10 h-10 rounded-lg object-cover shadow-sm flex-shrink-0 mt-1"
                         width="40"
                         height="40"
