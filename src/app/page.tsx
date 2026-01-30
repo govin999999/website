@@ -41,14 +41,6 @@ const PROJECTS = [
     icon: "/bg/genius.jpg",
     href: "/Genius",
     category: "PerpDex"
-  },
-  {
-    title: "Standx Auto Trade",
-    description: "Standx 平台自动化交易脚本，支持多账户并发与自动做市。",
-    icon: "/bg/standx.jpg",
-    href: "/standx",
-    tag: "SCRIPT",
-    category: "PerpDex"
   }
 ];
 
